@@ -7,6 +7,7 @@ c.customerid,
 c.customername,
 c.segment,
 c.country,
+P.productid,
 p.category,
 p.productname,
 p.subcategory
