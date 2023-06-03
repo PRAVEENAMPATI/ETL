@@ -3,4 +3,4 @@
         materialized='table'
     )
 }}
-select * from kpi_test.customer
+select * from {{ source('globalmart', 'customer') }}

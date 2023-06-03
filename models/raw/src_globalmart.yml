@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: globalmart
+    database: kpi_test
+    schema: kpi_test
+    tables:
+      - name: customer
+      - name: orders
+      - name: product
