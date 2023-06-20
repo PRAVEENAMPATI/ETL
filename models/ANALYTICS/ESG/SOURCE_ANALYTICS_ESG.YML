@@ -1,0 +1,16 @@
+version: 2
+#https://docs.getdbt.com/docs/building-a-dbt-project/using-sources
+#--------------# Source Objects Related to E2OPEN #--------------#
+sources:
+
+#--------------# STG_EBS_RPT_OWNER Staging to ETL #--------------#
+  - name: STG_EBS_RPT_OWNER
+    tags: ['MART_ESG']
+    schema: STG_EBS_RPT_OWNER
+    freshness: # default freshness
+        warn_after: {count: 24, period: hour}
+        error_after: {count: 48, period: hour}
+    loaded_at_field: BIW_UPD_DTTM
+    tables:
+      - name: RPT_GL_GHG_EMISSIONS_ALLOC_COS
+      - name: RPT_GL_GHG_EMISSIONS_ALLOC_EARNED  
