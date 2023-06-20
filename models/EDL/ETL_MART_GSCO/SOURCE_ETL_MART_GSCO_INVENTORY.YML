@@ -1,0 +1,11 @@
+version: 2
+#https://docs.getdbt.com/docs/building-a-dbt-project/using-sources
+#--------------# Source Objects Related to MART_SALES #--------------#
+sources:
+
+#--------------# COST_OF_GOODS_SOLD #--------------#
+  - name: STG_MAINFRAME
+    tags: ['MART_FINANCE']
+    schema: STG_MAINFRAME
+    tables: 
+      - name: MFG_INVENTORY_SUM
