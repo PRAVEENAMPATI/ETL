@@ -1,0 +1,10 @@
+version: 2
+
+models:
+####################### COGS_FACT TESTING #####################################
+  - name: ETL_MART_GSCO_IRAB_INVENTORY_SUMMARY_CURRENT_FACT
+    columns:
+     - name:  IRAB_INVENTORY_SUMMARY_KEY
+       tests:
+         - unique
+         - not_null
