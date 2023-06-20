@@ -1,3 +1,7 @@
+{{ config(
+    materialized="view",
+    schema="kpi_test"
+) }}
 select customerid,
         segment,
         country,
